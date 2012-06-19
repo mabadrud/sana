@@ -1,0 +1,8 @@
+<Procedure title="Test MultiUpload" author="Moca">
+	<Page>
+		<Element type="PICTURE" id="testPicture" question="Add Test Picture" answer=""/>
+	</Page>
+	<Page>
+		<Element type="PICTURE" id="testPicture2" question="Add Test Picture #2" answer=""/>
+	</Page>
+</Procedure>

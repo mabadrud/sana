@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center"
+	android:background="@drawable/main_background">
+	<!-- <Button android:id="@+id/moca_main_record"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Lookup Patient Record" /> -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Visualization"
+        android:textAppearance="?android:attr/textAppearanceLarge" android:layout_marginBottom="30px"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Type:"
+        android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginBottom="20px"/>
+
+	<Button android:id="@+id/moca_main_location"
+		android:layout_width="240px"
+		android:layout_height="wrap_content" android:text="Location" android:layout_marginTop="10px"/>
+	<Button android:id="@+id/moca_main_name"
+		android:layout_width="240px"
+		android:layout_height="wrap_content"
+		android:text="Name" />
+	<Button android:id="@+id/moca_main_condition"
+		android:layout_width="240px"
+		android:layout_height="wrap_content"
+		android:text="Condition" />
+	<Button android:id="@+id/moca_main_advanced"
+		android:layout_width="240px"
+		android:layout_height="wrap_content"
+		android:text="Advanced Search" />
+</LinearLayout>

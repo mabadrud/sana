@@ -1,0 +1,77 @@
+<Procedure title="Find Patient">
+	<Page>
+		<Element type="RADIO" id="patientEnrolled" concept="PATIENT ALREADY ENROLLED" question="Does the patient already have an ID card? If not, the patient enrollment process will begin." answer="" choices="Yes,No"/>
+	</Page>
+
+<!-- show only if existing patient --> 
+
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="Yes"/>
+		</ShowIf>
+		<Element type="PATIENT_ID" id="patientId" concept="PATIENT ID" question="Enter Patient's Medical Record ID Number:" answer=""/>
+	</Page>
+	
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="Yes"/>
+		</ShowIf>
+		<Element type="ENTRY" id="patientFirstName" concept="FIRST NAME" question="Enter Patient's First Name:" answer=""/>
+		<Element type="ENTRY" id="patientLastName" concept="LAST NAME" question="Last Name:" answer=""/>
+	</Page>
+	
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="Yes"/>
+		</ShowIf>
+	    <Element type="SELECT" id="patientBirthdateMonth" concept="BIRTHDATE MONTH" question="Enter Patient's Birthdate Month:" choices="January,February,March,April,May,June,July,August,September,October,November,December"/>
+	    <Element type="SELECT" id="patientBirthdateDay" concept="BIRTHDATE DAY" question="Day:" choices="01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+	   	<Element type="ENTRY" id="patientBirthdateYear" concept="BIRTHDATE YEAR" question="Year:" answer=""/>
+	    
+  </Page>
+ 
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="Yes"/>
+		</ShowIf>
+		<Element type="RADIO" id="patientGender" concept="GENDER" question="Select Patient's Gender:" answer="" choices="Male,Female"/>
+	</Page>
+	
+	
+<!-- show only if new patient -->
+	
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="No"/>
+		</ShowIf>
+		<Element type="PATIENT_ID" id="patientIdNew" concept="PATIENT ID" question="Enter New Patient's Medical Record ID Number:" answer=""/>
+	</Page>
+	
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="No"/>
+		</ShowIf>
+		<Element type="ENTRY" id="patientFirstNameNew" concept="FIRST NAME" question="Enter Patient's First Name:" answer=""/>
+		<Element type="ENTRY" id="patientLastNameNew" concept="LAST NAME" question="Last Name:" answer=""/>
+	</Page>
+	
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="No"/>
+		</ShowIf>
+	    <Element type="SELECT" id="patientBirthdateMonthNew" concept="BIRTHDATE MONTH" question="Enter Patient's Birthdate Month:" choices="January,February,March,April,May,June,July,August,September,October,November,December"/>
+	    <Element type="SELECT" id="patientBirthdateDayNew" concept="BIRTHDATE DAY" question="Day:" choices="01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+	   	<Element type="ENTRY" id="patientBirthdateYearNew" concept="BIRTHDATE YEAR" question="Year:" answer=""/>
+	    
+  </Page>
+ 
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="patientEnrolled" value="No"/>
+		</ShowIf>
+		<Element type="RADIO" id="patientGenderNew" concept="GENDER" question="Select Patient's Gender:" answer="" choices="Male,Female"/>
+	</Page>
+	
+	
+	
+</Procedure>

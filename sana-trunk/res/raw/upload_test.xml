@@ -1,0 +1,5 @@
+<Procedure title="Test Upload" author="Moca">
+	<Page>
+		<Element type="PICTURE" id="testPicture" question="Add Test Picture" answer=""/>
+	</Page>
+</Procedure>
